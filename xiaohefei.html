@@ -414,44 +414,10 @@
       }
     };
     
-    // 
-    revealElements.forEach(el => {
-      el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-    });
-    
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); 
-    
-    // 
-    document.querySelectorAll('.video-overlay').forEach(overlay => {
-      overlay.addEventListener('click', function() {
-        const videoId = this.closest('.group').querySelector('h3').textContent;
-        alert(` ${videoId}）`);
-      });
-    });
-  </script>
-<span id="runtime"></span>
 <span id="runtime"></span>
 
 <script>
 
-<span id="runtime"></span>
 
-<script>
-// 
-const startTime = Date.now();
-
-function pad(n) {
-  return n < 10 ? '0' + n : n;
-}
-
-function update() {
-  const sec = Math.floor((Date.now() - startTime) / 1000);
-  document.getElementById("runtime").textContent = pad(sec) + " 秒";
-}
-
-setInterval(update, 1000);
-update();
-</script>
   
 </div></footer></body></html>
