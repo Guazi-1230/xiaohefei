@@ -76,7 +76,8 @@
             用细节打磨每一帧<br class="hidden sm:block">让画面传递温度
           </h1>
           <p class="text-[clamp(1rem,2vw,1.25rem)] text-primary/70 leading-relaxed mb-12 max-w-2xl mx-auto">
-            剪辑大佬，将杂乱素材雕琢成流畅精彩的视频，用精准节奏打动观众。
+            「业余剪辑爱好者，主打一个玩得开心」
+
           </p>
           <a href="#work" class="inline-block border border-primary px-8 py-3 text-sm uppercase uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">
             查看作品
@@ -90,7 +91,7 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-light mb-4">剪辑作品</h2>
-      <p class="text-primary/70 max-w-2xl mx-auto">每一部作品都凝聚着对细节的极致追求和对视频的深刻理解。</p>
+      <p class="text-primary/70 max-w-2xl mx-auto">每一部作品都凝聚着对对视频的理解。</p>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -233,7 +234,7 @@
               小贺飞这人，手艺和人品一样靠谱。论剪辑技术，她眼睛像装了放大镜，一帧帧抠细节，杂乱素材经他手准能变成流畅又抓人的成片，连最难调的节奏都能拿捏得恰到好处。
             </p>
             <p class="text-primary/80 mb-8 leading-relaxed">
-            
+             「剪视频纯靠手感，节奏全凭感觉」
             </p>
             
             <div class="flex flex-wrap gap-6 mb-8">
@@ -291,9 +292,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-white p-8 md:p-10 border border-accent/30 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
             <i class="fa fa-film text-3xl mb-6 text-primary/80"></i>
-            <h3 class="text-xl font-medium mb-4">剪辑视频</h3>
+            <h3 class="text-xl font-medium mb-4">视频剪辑</h3>
             <p class="text-primary/70 leading-relaxed mb-6">
-              精准把握视频调性，通过节奏与画面的巧妙结合，传递视频核心价值。，呈现出最佳的效果。
+              精准把握视频调性，通过节奏与画面的巧妙结合，呈现出最佳的效果。
             </p>
             <ul class="text-sm text-primary/70 space-y-3">
               <li class="flex items-start">
@@ -302,7 +303,7 @@
               </li>
               <li class="flex items-start">
                 <i class="fa fa-check mt-1 mr-2"></i>
-                <span>网络短视频剪辑</span>
+                <span>游戏视频片段剪辑</span>
               </li>
               <li class="flex items-start">
                 <i class="fa fa-check mt-1 mr-2"></i>
@@ -317,9 +318,9 @@
           
           <div class="bg-white p-8 md:p-10 border border-accent/30 hover:border-primary/30 transition-all duration-300 hover:shadow-md">
             <i class="fa fa-music text-3xl mb-6 text-primary/80"></i>
-            <h3 class="text-xl font-medium mb-4">音乐影像剪辑</h3>
+            <h3 class="text-xl font-medium mb-4">音乐卡点剪辑</h3>
             <p class="text-primary/70 leading-relaxed mb-6">
-              精准卡点，让画面与音乐完美融合，创造富有韵律感的视觉体验。深入理解音乐情感，打造沉浸式观看感受。
+              让画面与音乐完美融合，创造富有韵律感的视觉体验。
             </p>
             <ul class="text-sm text-primary/70 space-y-3">
               <li class="flex items-start">
@@ -332,11 +333,11 @@
               </li>
               <li class="flex items-start">
                 <i class="fa fa-check mt-1 mr-2"></i>
-                <span>音乐视觉化视频</span>
+                <span>歌曲卡点视频剪辑</span>
               </li>
               <li class="flex items-start">
                 <i class="fa fa-check mt-1 mr-2"></i>
-                <span>歌曲卡点视频制作</span>
+                <span（这是凑热闹的）</span>
               </li>
             </ul>
           </div>
@@ -352,8 +353,7 @@
         <a href="#" class="text-xl font-semibold mb-4 md:mb-0">小贺飞</a>
         <p class="text-sm text-primary/70 text-center md:text-right">
         数据的获取时间是2025年11月20日（UTF-8）
-       
-          PS：一些介绍是编的
+        *注：部分介绍为整活，真实情况请以实际作品为准*
         </p>
       </div>
 
@@ -430,7 +430,25 @@
       });
     });
   </script>
+<span id="runtime"></span>
 
+<script>
+// 网站的时间
+const launch = +new Date("2026-03-22 22:34:00");
+
+function pad(n){return n<10?'0'+n:n}
+function run(){
+  const d = Date.now()-launch;
+  const day = Math.floor(d/86400000);
+  const h = Math.floor(d%86400000/3600000);
+  const m = Math.floor(d%3600000/60000);
+  const s = Math.floor(d%60000/1000);
+  document.getElementById("runtime").textContent = 
+    `稳定了 ${day}天${pad(h)}时${pad(m)}分${pad(s)}秒`;
+}
+setInterval(run,1000);
+run();
+</script>
 
     
 </div></footer></body></html>
