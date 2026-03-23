@@ -434,14 +434,14 @@
 
 <script>
 // 网站的时间
-const launch = +new Date("2026-03-22 22:34:00");
+const launch = +new Date("");
 
 function pad(n){return n<10?'0'+n:n}
 function run(){
   const d = Date.now()-launch;
   const s = Math.floor(d%60000/1000);
   document.getElementById("runtime").textContent = 
-    `存在了 ${pad(s)}秒`;
+    `你看了 ${pad(s)}秒`;
 }
 setInterval(run,1000);
 run();
