@@ -439,12 +439,9 @@ const launch = +new Date("2026-03-22 22:34:00");
 function pad(n){return n<10?'0'+n:n}
 function run(){
   const d = Date.now()-launch;
-  const day = Math.floor(d/86400000);
-  const h = Math.floor(d%86400000/3600000);
-  const m = Math.floor(d%3600000/60000);
   const s = Math.floor(d%60000/1000);
   document.getElementById("runtime").textContent = 
-    `稳定了 ${day}天${pad(h)}时${pad(m)}分${pad(s)}秒`;
+    `存在了 ${pad(s)}秒`;
 }
 setInterval(run,1000);
 run();
