@@ -431,21 +431,27 @@
     });
   </script>
 <span id="runtime"></span>
+<span id="runtime"></span>
 
 <script>
-// 网站的时间
-const launch = +new Date("");
 
-function pad(n){return n<10?'0'+n:n}
-function run(){
-  const d = Date.now()-launch;
-  const s = Math.floor(d%60000/1000);
-  document.getElementById("runtime").textContent = 
-    `你看了 ${pad(s)}秒`;
+<span id="runtime"></span>
+
+<script>
+// 
+const startTime = Date.now();
+
+function pad(n) {
+  return n < 10 ? '0' + n : n;
 }
-setInterval(run,1000);
-run();
-</script>
 
-    
+function update() {
+  const sec = Math.floor((Date.now() - startTime) / 1000);
+  document.getElementById("runtime").textContent = pad(sec) + " 秒";
+}
+
+setInterval(update, 1000);
+update();
+</script>
+  
 </div></footer></body></html>
