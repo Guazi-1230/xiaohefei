@@ -1,5 +1,4 @@
-<html lang="zh-CN">
-<head>
+<html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小贺飞 | 个人介绍</title>
@@ -30,21 +29,20 @@
       .text-balance {
         text-wrap: balance;
       }
+      .video-overlay {
+        @apply absolute inset-0 bg-primary/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center;
+      }
       .nav-scrolled {
         @apply bg-white shadow-md;
-      }
-      //
-      header:not(.nav-scrolled) {
-        @apply bg-transparent;
       }
     }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 </head>
 <body class="font-sans bg-white text-primary antialiased">
-  // 头部导航
+  <!-- 头部导航 -->
   <header class="fixed w-full top-0 z-50 transition-all duration-300 py-4" id="navbar">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center">
@@ -59,7 +57,7 @@
         </button>
       </div>
     </div>
-    // 移动端菜单
+    <!-- 移动端菜单 -->
     <div class="md:hidden hidden bg-white border-t border-accent/30 mt-4" id="mobile-menu">
       <div class="container mx-auto px-4 py-4 space-y-4">
         <a href="#work" class="block text-sm uppercase tracking-widest hover:text-highlight transition-colors">作品</a>
@@ -70,7 +68,7 @@
   </header>
 
   <main>
-    // 主页区域
+    <!-- 主页区域 -->
     <section class="pt-32 pb-20 md:pt-40 md:pb-32">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
@@ -79,138 +77,167 @@
           </h1>
           <p class="text-[clamp(1rem,2vw,1.25rem)] text-primary/70 leading-relaxed mb-12 max-w-2xl mx-auto">
             「业余剪辑爱好者，主打一个玩得开心」
+
           </p>
-          <a href="#work" class="inline-block border border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">
+          <a href="#work" class="inline-block border border-primary px-8 py-3 text-sm uppercase uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">
             查看作品
           </a>
         </div>
       </div>
     </section>
 
-    <section id="work" class="py-20 bg-secondary">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-light mb-4">剪辑作品</h2>
-          <p class="text-primary/70 max-w-2xl mx-auto">每一部作品都凝聚着对视频的理解。</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- 作品 1 -->
-          <div class="group">
-            <div class="relative overflow-hidden mb-4 aspect-video bg-black">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 z-10">
-                <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
-                <p class="text-center mb-2">在快手App中打开观看</p>
-                <p class="text-xs text-white/70">点击跳转到快手</p>
-              </div>
-              <img src="1.jpg" alt="作品封面：路上总有阴影 但抬头总能看到阳光" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
-              <a href="https://v.kuaishou.com/Jy2Lms78" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20"></a>
-            </div>
-            <h3 class="text-lg font-medium mb-1">“路上总有阴影 但抬头总能看到阳光”</h3>
-            <p class="text-sm text-primary/70 mb-3">挑战模仿 | 节奏剪辑</p>
-            <a href="https://v.kuaishou.com/Jy2Lms78" target="_blank" rel="noopener noreferrer" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
-          </div>
-          
-          <!-- 作品 2 -->
-          <div class="group">
-            <div class="relative overflow-hidden mb-4 aspect-video bg-black">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 z-10">
-                <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
-                <p class="text-center mb-2">在快手App中打开观看</p>
-                <p class="text-xs text-white/70">点击跳转到快手</p>
-              </div>
-              <img src="2.jpg" alt="作品封面：爱如同树一般多 总会有人拥抱你的不堪" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
-              <a href="https://v.kuaishou.com/KzUt25S3" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20"></a>
-            </div>
-            <h3 class="text-lg font-medium mb-1">“爱如同树一般多 总会有人拥抱你的不堪”</h3>
-            <p class="text-sm text-primary/70 mb-3">精彩卡点 | 酷炫剪辑</p>
-            <a href="https://v.kuaishou.com/KzUt25S3" target="_blank" rel="noopener noreferrer" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
-          </div>
-          
-          <!-- 作品 3 -->
-          <div class="group">
-            <div class="relative overflow-hidden mb-4 aspect-video bg-black">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 z-10">
-                <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
-                <p class="text-center mb-2">在快手App中打开观看</p>
-                <p class="text-xs text-white/70">点击跳转到快手</p>
-              </div>
-              <img src="3.jpg" alt="作品封面：原创视频" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
-              <a href="https://v.kuaishou.com/n5hW6mAw" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20"></a>
-            </div>
-            <h3 class="text-lg font-medium mb-1">原创视频</h3>
-            <p class="text-sm text-primary/70 mb-3">我的软糖 | 卡点剪辑</p>
-            <a href="https://v.kuaishou.com/n5hW6mAw" target="_blank" rel="noopener noreferrer" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
-          </div>
-          
-          <!-- 作品 4 -->
-          <div class="group">
-            <div class="relative overflow-hidden mb-4 aspect-video bg-black">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 z-10">
-                <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
-                <p class="text-center mb-2">在快手App中打开观看</p>
-                <p class="text-xs text-white/70">点击跳转到快手</p>
-              </div>
-              <img src="4.jpg" alt="作品封面：没有一个冬天不可逾越 也没有一个春天不会来临" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
-              <a href="https://v.kuaishou.com/npNnpZty" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20"></a>
-            </div>
-            <h3 class="text-lg font-medium mb-1">“没有一个冬天不可逾越 也没有一个春天不会来临”</h3>
-            <p class="text-sm text-primary/70 mb-3">权威 | 变装卡点</p>
-            <a href="https://v.kuaishou.com/npNnpZty" target="_blank" rel="noopener noreferrer" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
-          </div>
-          
-          <!-- 作品 5 -->
-          <div class="group">
-            <div class="relative overflow-hidden mb-4 aspect-video bg-black">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 z-10">
-                <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
-                <p class="text-center mb-2">在快手App中打开观看</p>
-                <p class="text-xs text-white/70">点击跳转到快手</p>
-              </div>
-              <img src="5.jpg" alt="作品封面：模仿ks @逍遥碎碎念" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
-              <a href="https://v.kuaishou.com/KZLzPQYb" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20"></a>
-            </div>
-            <h3 class="text-lg font-medium mb-1">此视频模仿的“逍遥碎碎念”</h3>
-            <p class="text-sm text-primary/70 mb-3">古风 | 权威剪辑</p>
-            <a href="https://v.kuaishou.com/KZLzPQYb" target="_blank" rel="noopener noreferrer" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
-          </div>
-          
-          <!-- 作品 6 -->
-          <div class="group">
-            <div class="relative overflow-hidden mb-4 aspect-video bg-black">
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 z-10">
-                <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
-                <p class="text-center mb-2">在快手App中打开观看</p>
-                <p class="text-xs text-white/70">点击跳转到快手</p>
-              </div>
-              <img src="6.jpg" alt="作品封面：我至佛前深叩首 倾诉心中幽愫" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
-              <a href="https://v.kuaishou.com/nsN2Mc55" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20"></a>
-            </div>
-            <h3 class="text-lg font-medium mb-1">“我至佛前深叩首 倾诉心中幽愫”</h3>
-            <p class="text-sm text-primary/70 mb-3">夏花 | 酷炫剪辑</p>
-            <a href="https://v.kuaishou.com/nsN2Mc55" target="_blank" rel="noopener noreferrer" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
-          </div>
-        </div>
-        
-        <div class="text-center mt-12">
-          <a href="https://v.kuaishou.com/Jv3dxa8A" target="_blank" rel="noopener noreferrer"
-             class="inline-block border border-primary px-8 py-3 text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">
-            查看更多作品请打开快手搜索“小贺飞”
-          </a>
-        </div>
-      </div>
-    </section>
 
+<section id="work" class="py-20 bg-secondary">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-light mb-4">剪辑作品</h2>
+      <p class="text-primary/70 max-w-2xl mx-auto">每一部作品都凝聚着对对视频的理解。</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 作品 1 -->
+      <div class="group">
+        <div class="relative overflow-hidden mb-4 aspect-video bg-black">
+       
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+            <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
+            <p class="text-center mb-2">点击观看视频</p>
+            <p class="text-xs text-white/70">将在快手平台打开</p>
+          </div>
+         
+          <img src="1.jpg" alt="路上总有阴影 但抬头总能看到阳光" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
+          
+          <a href="https://v.kuaishou.com/Jy2Lms78" target="_blank" class="absolute inset-0 z-10"></a>
+        </div>
+        <h3 class="text-lg font-medium mb-1">“路上总有阴影 但抬头总能看到阳光”</h3>
+        <p class="text-sm text-primary/70 mb-3">挑战模仿 | 节奏剪辑</p>
+        <a href="https://v.kuaishou.com/Jy2Lms78" target="_blank" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
+      </div>
+      
+      <!-- 作品 2 -->
+      <div class="group">
+        <div class="relative overflow-hidden mb-4 aspect-video bg-black">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+            <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
+            <p class="text-center mb-2">点击观看视频</p>
+            <p class="text-xs text-white/70">将在快手平台打开</p>
+          </div>
+          <img src="2.jpg" alt="爱如同树一般多 总会有人拥抱你的不堪" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
+          <a href="https://v.kuaishou.com/KzUt25S3" target="_blank" class="absolute inset-0 z-10"></a>
+        </div>
+        <h3 class="text-lg font-medium mb-1">“爱如同树一般多 总会有人拥抱你的不堪”</h3>
+        <p class="text-sm text-primary/70 mb-3">精彩卡点 | 酷炫剪辑</p>
+        <a href="https://v.kuaishou.com/KzUt25S3" target="_blank" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
+      </div>
+      
+      <!-- 作品 3 -->
+      <div class="group">
+        <div class="relative overflow-hidden mb-4 aspect-video bg-black">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+            <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
+            <p class="text-center mb-2">点击观看视频</p>
+            <p class="text-xs text-white/70">将在快手平台打开</p>
+          </div>
+          <img src="3.jpg" alt="原创视频" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
+          <a href="https://v.kuaishou.com/n5hW6mAw" target="_blank" class="absolute inset-0 z-10"></a>
+        </div>
+        <h3 class="text-lg font-medium mb-1">原创视频</h3>
+        <p class="text-sm text-primary/70 mb-3">我的软糖 | 卡点剪辑</p>
+        <a href="https://v.kuaishou.com/n5hW6mAw" target="_blank" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
+      </div>
+      
+      <!-- 作品 4 -->
+      <div class="group">
+        <div class="relative overflow-hidden mb-4 aspect-video bg-black">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+            <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
+            <p class="text-center mb-2">点击观看视频</p>
+            <p class="text-xs text-white/70">将在快手平台打开</p>
+          </div>
+          <img src="4.jpg" alt="没有一个冬天不可逾越 也没有一个春天不会来临" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
+          <a href="https://v.kuaishou.com/npNnpZty" target="_blank" class="absolute inset-0 z-10"></a>
+        </div>
+        <h3 class="text-lg font-medium mb-1">“没有一个冬天不可逾越 也没有一个春天不会来临”</h3>
+        <p class="text-sm text-primary/70 mb-3">权威 | 变装卡点</p>
+        <a href="https://v.kuaishou.com/npNnpZty" target="_blank" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
+      </div>
+      
+      <!-- 作品 5 -->
+      <div class="group">
+        <div class="relative overflow-hidden mb-4 aspect-video bg-black">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+            <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
+            <p class="text-center mb-2">点击观看视频</p>
+            <p class="text-xs text-white/70">将在快手平台打开</p>
+          </div>
+          <img src="5.jpg" alt="此视频模仿的“ks @逍遥碎碎念”" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
+          <a href="https://v.kuaishou.com/KZLzPQYb" target="_blank" class="absolute inset-0 z-10"></a>
+        </div>
+        <h3 class="text-lg font-medium mb-1">此视频模仿的“逍遥碎碎念”</h3>
+        <p class="text-sm text-primary/70 mb-3">古风 | 权威剪辑</p>
+        <a href="https://v.kuaishou.com/KZLzPQYb" target="_blank" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
+      </div>
+      
+      <!-- 作品 6 -->
+      <div class="group">
+        <div class="relative overflow-hidden mb-4 aspect-video bg-black">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+            <i class="fa fa-play-circle-o text-6xl mb-4 text-white/90"></i>
+            <p class="text-center mb-2">点击观看视频</p>
+            <p class="text-xs text-white/70">将在快手平台打开</p>
+          </div>
+          <img src="6.jpg" alt="我至佛前深叩首 倾诉心中幽愫" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70">
+          <a href="https://v.kuaishou.com/nsN2Mc55" target="_blank" class="absolute inset-0 z-10"></a>
+        </div>
+        <h3 class="text-lg font-medium mb-1">“我至佛前深叩首 倾诉心中幽愫”</h3>
+        <p class="text-sm text-primary/70 mb-3">夏花 | 酷炫剪辑</p>
+        <a href="https://v.kuaishou.com/nsN2Mc55" target="_blank" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">查看原视频 <i class="fa fa-external-link ml-2"></i></a>
+      </div>
+    </div>
+    
+<div class="text-center mt-12">
+  <a href="https://v.kuaishou.com/Jv3dxa8A"
+    target="_blank" rel="noopener noreferrer"
+     class="inline-block border border-primary px-8 py-3 text-sm uppercase tracking-widest
+    hover:bg-primary hover:text-white transition-colors">
+  查看更多作品请打开快手搜索“小贺飞”
+  </a>
+</div>
+  </div>
+</section>
+
+<script>
+  // 
+  document.addEventListener('DOMContentLoaded', function() {
+    // 
+    document.querySelectorAll('.group').forEach(card => {
+      const overlay = card.querySelector('.absolute.inset-0.flex');
+      const img = card.querySelector('img');
+      
+      card.addEventListener('mouseenter', () => {
+        if (overlay) overlay.classList.add('opacity-100');
+        if (img) img.classList.add('opacity-50');
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        if (overlay) overlay.classList.remove('opacity-100');
+        if (img) img.classList.remove('opacity-50');
+      });
+    });
+  });
+</script>
+
+    
     <section id="about" class="py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-light mb-6">关于小贺飞</h2>
             <p class="text-primary/80 mb-6 leading-relaxed">
-              小贺飞这人，手艺和人品一样靠谱。论剪辑技术，眼睛像装了放大镜，一帧帧抠细节，杂乱素材经ta手准能变成流畅又抓人的成片，连最难调的节奏都能拿捏得恰到好处。
+              小贺飞这人，手艺和人品一样靠谱。论剪辑技术，她眼睛像装了放大镜，一帧帧抠细节，杂乱素材经他手准能变成流畅又抓人的成片，连最难调的节奏都能拿捏得恰到好处。
             </p>
             <p class="text-primary/80 mb-8 leading-relaxed">
-              「剪视频纯靠手感，节奏全凭感觉」
+             「剪视频纯靠手感，节奏全凭感觉」
             </p>
             
             <div class="flex flex-wrap gap-6 mb-8">
@@ -227,15 +254,16 @@
                 <p class="text-sm text-primary/70">小红书粉丝数</p>
               </div>
             </div>
+            
            
             <div class="flex flex-wrap gap-4">
-              <a href="javascript:void(0)" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">
+              <a href="#" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">
                 <i class="fa fa-video-camera mr-2"></i> 快手
               </a>
-              <a href="javascript:void(0)" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">
+              <a href="#" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">
                 <i class="fa fa-music mr-2"></i> 抖音
               </a>
-              <a href="javascript:void(0)" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">
+              <a href="#" class="text-sm uppercase tracking-widest hover:text-highlight transition-colors">
                 <i class="fa fa-bookmark-o mr-2"></i> 小红书
               </a>
             </div>
@@ -243,19 +271,20 @@
         
           <div class="flex flex-col sm:flex-row gap-4 overflow-hidden">
             <div class="flex-1">
-              <img src="7.jpg" alt="小贺飞快手主页截图" class="w-full h-full object-cover rounded-sm shadow-sm">
+              <img src="7.jpg" alt="小贺飞快手" class="w-full h-full object-cover rounded-sm shadow-sm">
             </div>
             <div class="flex-1">
-              <img src="8.jpg" alt="小贺飞抖音主页截图" class="w-full h-full object-cover rounded-sm shadow-sm">
+              <img src="8.jpg" alt="小贺飞抖音" class="w-full h-full object-cover rounded-sm shadow-sm">
             </div>
             <div class="flex-1">
-              <img src="9.jpg" alt="小贺飞小红书主页截图" class="w-full h-full object-cover rounded-sm shadow-sm">
+              <img src="9.jpg" alt="小贺飞小红书" class="w-full h-full object-cover rounded-sm shadow-sm">
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    
     <section id="services" class="py-20 bg-secondary">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
@@ -311,7 +340,7 @@
               </li>
               <li class="flex items-start">
                 <i class="fa fa-check mt-1 mr-2"></i>
-                <span>“这是凑热闹的”</span>
+                </span>“这是凑热闹的”</span>
               </li>
             </ul>
           </div>
@@ -319,81 +348,16 @@
       </div>
     </section>
   </main>
+
   
   <footer class="py-12 border-t border-accent/30">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <a href="#" class="text-xl font-semibold mb-4 md:mb-0">小贺飞</a>
         <p class="text-sm text-primary/70 text-center md:text-right">
-          数据的获取时间是2025年11月20日（UTC+8）<br>
-          *注：部分介绍为整活，真实情况请以实际作品为准*
+        数据的获取时间是2025年11月20日（UTC+8）
+        *注：部分介绍为整活，真实情况请以实际作品为准*
         </p>
       </div>
-    </div>
-  </footer>
 
   <script>
-    (function() {
-      // 导航栏滚动效果
-      const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-          navbar.classList.add('nav-scrolled');
-        } else {
-          navbar.classList.remove('nav-scrolled');
-        }
-      });
-
-      // 移动端菜单切换
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-          menuToggle.innerHTML = mobileMenu.classList.contains('hidden') 
-            ? '<i class="fa fa-bars"></i>' 
-            : '<i class="fa fa-times"></i>';
-        });
-      }
-
-      // 滚动
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          const target = document.querySelector(targetId);
-          if (target) {
-            e.preventDefault();
-            window.scrollTo({
-              top: target.offsetTop - 80,
-              behavior: 'smooth'
-            });
-            // 关闭移动端菜单
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-              mobileMenu.classList.add('hidden');
-              menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
-            }
-          }
-        });
-      });
-
-      // 滚动渐现动画
-      const revealElements = document.querySelectorAll('.grid, section > div > h2, section > div > p, .bg-white');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      
-      revealElements.forEach(el => {
-        el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
-        observer.observe(el);
-      });
-    })();
-  </script>
-</body>
-</html>
